@@ -1,0 +1,14 @@
+```mermaid
+sequenceDiagram
+    Browser ->> Server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    Server -->> Browser: 302 Redirect Response
+    Browser ->> Server: GET /exampleapp/noteshttps://studies.cs.helsinki.fi/exampleapp/notes
+    Server -->> Browser: 200 OK
+    Browser ->> Server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    Server -->> Browser: main.css
+    Browser ->> Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Server -->> Browser: main.js
+    note right of Browser: Browser executes main.js
+    Browser ->> Server: GET  https://studies.cs.helsinki.fi/exampleapp/data.json
+    Server -->> Browser: data.json
+```
